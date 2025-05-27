@@ -1,4 +1,4 @@
-# Nginx as Reverse Proxy
+# Load balancing and Reverse Proxy Using Nginx
 
 This project demonstrates how to configure **Nginx as a reverse proxy and load balancer** for multiple backend applications — all containerized using Docker and managed via Docker Compose.
 
