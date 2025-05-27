@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nginx Reverse Proxy Configuration</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #eef1f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background: #39a952;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            color: #007bff;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: square;
+            margin-left: 2rem;
+        }
+
+        footer {
+            text-align: center;
+            margin: 3rem 0 0;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nginx Reverse Proxy Configuration</h1>
+        <p>Learn how to configure Nginx as a reverse proxy for your Dockerized applications</p>
+    </header>
+    <main>
+        <h2>What is Nginx?</h2>
+        <p><strong>Nginx</strong> is a high-performance web server that is widely used as a reverse proxy, load balancer, and HTTP cache. It is known for its ability to handle a large number of concurrent connections with minimal resource usage. It is often used in front of application servers to manage traffic and provide additional functionality like security and caching.</p>
+
+        <h3>Why Use Nginx as a Reverse Proxy?</h3>
+        <p>Nginx as a reverse proxy allows you to:</p>
+        <ul>
+            <li>Distribute client requests among multiple backend servers (load balancing).</li>
+            <li>Serve SSL certificates for secure HTTPS communication.</li>
+            <li>Cache content to reduce server load and improve response times.</li>
+            <li>Improve security by hiding the backend servers behind Nginx.</li>
+        </ul>
+
+        <h3>Nginx as a Proxy</h3>
+        <p>Nginx can act as a reverse proxy, forwarding client requests to backend servers and then returning the response to the client. This setup allows Nginx to:</p>
+        <ul>
+            <li>Handle high volumes of incoming traffic.</li>
+            <li>Ensure that the backend servers are protected from direct public access.</li>
+            <li>Distribute requests to multiple servers for load balancing.</li>
+        </ul>
+
+        <h3>Nginx for Caching</h3>
+        <p>Nginx can be configured to cache responses from backend services, reducing the load on the servers and speeding up response times. Caching is especially useful for content that doesn't change frequently, such as static files (images, CSS, JavaScript). By storing the content in memory or on disk, Nginx can serve it directly to clients without needing to hit the backend service every time.</p>
+
+        <h3>Nginx for Security</h3>
+        <p>When used as a reverse proxy, Nginx provides an additional layer of security by acting as an intermediary between the client and the backend services. Key security features of Nginx include:</p>
+        <ul>
+            <li><strong>SSL/TLS Encryption:</strong> Secure communication between clients and servers using HTTPS.</li>
+            <li><strong>Access Control:</strong> Control who can access certain resources with IP whitelisting or authentication mechanisms.</li>
+            <li><strong>Rate Limiting:</strong> Protect backend services from denial-of-service (DoS) attacks by limiting the number of requests a client can make in a given time frame.</li>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2024 Nginx Reverse Proxy Demo | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
